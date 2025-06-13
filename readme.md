@@ -36,15 +36,14 @@ flowchart TD
     E -- Yes --> F[Pickup Agent Collects Parcel]
     F --> G[Status: In Transit]
     G --> H[Ready for Delivery]
-    H --> I[OTP Sent to Customer]
-    I --> J[Delivery Confirmed]
-    J --> K[Agent Earns ৳20]
-    E -- No --> L[Submit to Origin Warehouse]
-    L --> M[Inter-District Transit]
-    M --> N[Arrive at Destination Warehouse]
-    N --> O[Assign Local Delivery Agent]
-    O --> P[OTP Delivery to Customer]
-    P --> Q[Agent Earns ৳20]
+    H --> I[Delivery Confirmed]
+    I --> J[Agent Earns ৳20]
+    E -- No --> K[Submit to Origin Warehouse]
+    K --> L[Inter-District Transit]
+    L --> M[Arrive at Destination Warehouse]
+    M --> N[Assign Local Delivery Agent]
+    N --> O[Delivery Confirmed]
+    O --> P[Agent Earns ৳20]
 ```
 
 ---
