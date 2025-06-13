@@ -29,21 +29,12 @@ A curated collection of tools, guides, and assets for developing robust parcel m
 
 ```mermaid
 flowchart TD
-    A[Merchant Books Parcel] --> B[System Calculates Charge]
-    B --> C[Payment & Tracking ID]
-    C --> D[Admin Assigns Pickup Agent]
-    D --> E{Within City?}
-    E -- Yes --> F[Pickup Agent Collects Parcel]
-    F --> G[Status: In Transit]
-    G --> H[Ready for Delivery]
-    H --> I[Delivery Confirmed]
-    I --> J[Agent Earns ৳20]
-    E -- No --> K[Submit to Origin Warehouse]
-    K --> L[Inter-District Transit]
-    L --> M[Arrive at Destination Warehouse]
-    M --> N[Assign Local Delivery Agent]
-    N --> O[Delivery Confirmed]
-    O --> P[Agent Earns ৳20]
+    A[Agent Collects Parcel] --> B{Within City?}
+    B -- Yes --> C[Agent Delivers Parcel]
+    B -- No --> D[Agent Sends to Warehouse]
+    D --> E[Warehouse Sends to Destination]
+    E --> F[Admin Assigns Delivery Agent]
+    F --> G[Agent Delivers Parcel]
 ```
 
 ---
